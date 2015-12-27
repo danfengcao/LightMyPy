@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from LightMysql import LightMysql # 导入封装类
+from LightMysql import LightMysql
 
 if __name__ == '__main__':
 
@@ -17,9 +17,9 @@ if __name__ == '__main__':
 
         # 查找(select, show)都使用query()函数
         sql_select = "SELECT * FROM Customer"
-        result_all = db.query(sql_select) # 返回全部数据
+        result_all = db.query(sql_select) # 默认返回全部数据
         result_count = db.query(sql_select, 'count') # 返回有多少行
-        result_one = db.query(sql_select, 'one') # 返回一行
+        result_one = db.query(sql_select, 'one') # 返回一行数据
 
         # 增删改都使用dml()函数
         sql_update = "update Customer set Cost=2 where Id=2"
