@@ -1,6 +1,10 @@
 __author__ = 'danfengcao'
-__date__ = '2015-04-01'
 
 '''
-A lightweight python class to manipulate MySQL,
+A lightweight class to operate MySQL,
+
+A Heavyweight class can be found in
+
+https://github.com/fkook/python_mysql/blob/master/python_mysql.py
+
 '''
