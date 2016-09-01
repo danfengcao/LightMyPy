@@ -1,5 +1,5 @@
 # LightMyPy
-Lightweight python class to manipulate MySQL database.
+A lightweight python class to manipulate MySQL database.
 
 ### How to use
 
@@ -26,6 +26,7 @@ sql_update = "update Customer set Cost=2 where Id=2"
 db.dml(sql_update)
 sql_insert = "insert into Customer value(1,'abc')"
 result_insert = db.dml(sql_insert)
+
 #其它操作
 sql_query = "create table test0 (`ShowMapID` int(11))"
 result_query = db.query(sql_query)
