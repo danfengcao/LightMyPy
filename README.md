@@ -3,8 +3,8 @@ Lightweight python class to manipulate MySQL database.
 
 ### How to use
 
-### How to use
-```
+```python
+
 # 配置信息，其中host, port, user, passwd, db为必需
 dbconfig = {'host':'127.0.0.1',
 'port': 3306,
@@ -29,4 +29,5 @@ result_insert = db.dml(sql_insert)
 #其它操作
 sql_query = "create table test0 (`ShowMapID` int(11))"
 result_query = db.query(sql_query)
+
 ```
