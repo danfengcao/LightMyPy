@@ -24,12 +24,10 @@ if __name__ == '__main__':
     # 增删改都使用dml()函数
     sql_update = "update Customer set Cost=2 where Id=2"
     result_update = db.dml(sql_update)
-    sql_delete = "delete from Customer where Id=2"
-    result_delete = db.dml(sql_delete)
     sql_insert = "insert into Customer value(1,'abc')"
-    result_delete = db.dml(sql_insert)
+    result_insert = db.dml(sql_insert)
     #其它操作
-    sql_query = "replace into Customer value(1,'abc')"
+    sql_query = "create table test0 (`ShowMapID` int(11))"
     result_query = db.query(sql_query)
 
     print result_all
