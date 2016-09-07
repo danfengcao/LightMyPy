@@ -24,7 +24,7 @@ class LightMysql:
         try:
             self._connect = MySQLdb.connect(
                 host=self._dbconfig['host'],
-                port=self._dbconfig['port'],
+                port=int(self._dbconfig['port']),
                 user=self._dbconfig['user'],
                 passwd=self._dbconfig['passwd'],
                 db=self._dbconfig['db'],
