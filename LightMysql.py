@@ -59,9 +59,9 @@ class LightMysql:
                 self._dbconfig['charset'] = 'utf8'
 
 
-    def select(self, sql, ret_type='all', ret_format='array'):
+    def select(self, sql, params=(), ret_type='all', ret_format='array'):
         '''select or show'''
-        self._cursor.execute(sql)
+        self._cursor.execute(sql, params)
         if ret_type == 'all':
             if (self._dbconfig.has_key('cursorType') and self._dbconfig['cursorType'] == 'list') or ret_format == 'row':
                 return self._cursor.fetchall()
@@ -73,9 +73,9 @@ class LightMysql:
             return self._cursor.rowcount
 
 
-    def dml(self, sql):
+    def dml(self, sql, params=()):
         '''update or delete or insert'''
-        self._cursor.execute(sql)
+        self._cursor.execute(sql, params)
         self._connect.commit()
         type = self.dml_type(sql)
         # if primary key is auto increase, return inserted ID.
