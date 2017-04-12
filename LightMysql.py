@@ -142,9 +142,10 @@ if __name__ == '__main__':
     result_insert = db.dml(sql_insert)
     print result_insert
 
-    sql_update = "update test0 set ShowMapID=3 where ShowMapID=2"
-    print sql_update
-    db.dml(sql_update)
+    sql_update = "update test0 set ShowMapID=%s where ShowMapID=%s"
+    update_param = (2,3)
+    print sql_update 
+    db.dml(sql_update,update_param)
 
     sql_select = "SELECT * FROM test0"
     print sql_select
